@@ -1,0 +1,190 @@
+1.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace project1
+{
+    class assignment8feb_1_1
+    {
+        static void Main()
+        {
+                int[] num = new int[10];
+               int sum = 0;
+               float avg;
+          Console.WriteLine("Enter Numbers");
+         for(int i=0;i<10;i++)
+          {
+             num[i] = Convert.ToInt16(Console.ReadLine());
+               sum += num[i];
+       }
+2.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace project1
+{
+    class assignment8feb_1_1
+    {
+        static void Main()
+        {
+            int[,] num = new int[3, 3];
+            int sum = 0;
+            Console.WriteLine("enter numbers");
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    num[i, j] = Convert.ToInt16(Console.ReadLine());
+                }
+            }
+
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    sum += num[i, j];
+                }
+            }
+            Console.WriteLine("sum is" + sum);
+
+        }
+    }
+}
+3.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace project1
+{
+    class assignment_1_2
+    {
+        static void Main()
+        {
+            int[] num = new int[] { 1, 2, 3, 4, 5 };
+            int max = num[0];
+
+            for (int i = 0; i < num.Length; i++)
+            {
+                if (num[i] > max)
+                {
+                    max = num[i];
+                }
+
+            }
+            Console.WriteLine("maximum element is" + max);
+
+
+        }
+    }
+}
+4.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace project1
+{
+    class assignment8feb_1_1
+    {
+        static void Main()
+        {
+            int[,] num = new int[3, 3];
+            int sum = 0;
+            Console.WriteLine("enter numbers");
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    num[i, j] = Convert.ToInt16(Console.ReadLine());
+                }
+            }
+
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    sum += num[j, i];
+                   
+                }
+                Console.WriteLine("sum is" + sum);
+                 sum=0;
+
+            }
+      
+
+        }
+    }
+}
+5.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace project1
+{
+    class assignment_1_2
+    {
+        static void Main()
+        {
+            int[] num = new int[] { 1, 2, 3, 4, 5 };
+            int max = num[0];
+
+            for (int i = 0; i < num.Length; i++)
+            {
+                if (num[i] > max)
+                {
+                    max = num[i];
+                }
+
+            }
+            Console.WriteLine("maximum element is" + max);
+
+
+        }
+    }
+}
+
+
+
+            avg = (float) sum / 10;
+              Console.WriteLine("Sum is " + sum);
+              Console.WriteLine("Average is " + avg);
+}
+}
+}
+2.
+       static void Main()
+        {
+            int[,] num = new int[3, 3];
+            int sum = 0;
+            Console.WriteLine("Enter Numbers");
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    num[i, j] = Convert.ToInt16(Console.ReadLine());
+                }
+            }
+
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    sum += num[i, j];
+                }
+
+                Console.WriteLine("sum is" + sum);
+            }

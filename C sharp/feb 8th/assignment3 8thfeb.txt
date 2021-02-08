@@ -1,0 +1,138 @@
+1.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace project1
+{
+    class assignment_1_2
+    {
+        static void Main()
+        {
+            int[] num = new int[5];
+            int count = 0;
+            Console.WriteLine("Enter Numbers");
+
+            for (int i = 0; i < num.Length; i++)
+            {
+                num[i] = Convert.ToInt16(Console.ReadLine());
+            }
+            for (int i = 0; i < num.Length; i++)
+            { 
+                for (int j=i+1; j<num.Length;j++)
+                {
+                    if (num[i] == num[j])
+                    {
+                        count++;
+                        break;
+
+                    }
+                }
+            }
+            Console.WriteLine("duplicate elements are" + count);
+
+
+        }
+    }
+}
+2.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace project1
+{
+    class assignment_1_2
+    {
+        static void Main()
+        {
+            int Maths, Phy, Chem;
+            Console.WriteLine("Enter Maths marks");
+            Maths= Convert.ToInt16(Console.ReadLine());
+            Console.WriteLine("Enter Physics marks");
+            Phy = Convert.ToInt16(Console.ReadLine());
+            Console.WriteLine("EnterChemistry marks");
+            Chem = Convert.ToInt16(Console.ReadLine());
+            int T1 = Maths + Phy + Chem;
+            int T2 = Maths + Phy;
+            if (Maths >= 65 && Phy >= 55 && Chem >= 50)
+            {
+                if (T1 >= 180 || T2 >= 140)
+                {
+                    Console.WriteLine("The candidate is eligible for admission");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Candidate is not eligible");
+            }
+
+
+        }
+    }
+}
+3.
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace project1
+{
+    class assignment_1_2
+    {
+        static void Main()
+        {
+            String name, IDNO;
+            int unit;
+            double Amount=0;
+            double subcharge=0, net_amnt;
+            Console.WriteLine("Enter customer id");
+            IDNO = Console.ReadLine();
+            Console.WriteLine("Enter Customer name");
+            name = Console.ReadLine();
+            Console.WriteLine("Enter units consumed");
+            unit = Convert.ToInt32(Console.ReadLine());
+            if (unit <= 199)
+            {
+                Amount = (1.20 * unit);
+                Console.WriteLine("Amount is" + Amount);
+            }
+            else if(unit>200 && unit < 400) 
+            {
+                Amount = (1.50 * unit);
+                Console.WriteLine("Amount is" + Amount);
+            }
+            else if (unit >= 400 && unit < 600)
+            {
+                Amount = (1.80 * unit);
+                Console.WriteLine("Amount is" + Amount);
+            }
+            else if(unit>=600)
+            {
+                Amount = (2.00 * unit);
+                Console.WriteLine("Amount is" + Amount);
+            }
+            if (Amount > 400)
+            {
+                subcharge = ((15 * Amount) / 100);
+            }
+            Console.WriteLine("Subcharge amount is"+ subcharge);
+            net_amnt = Amount + subcharge;
+            if (net_amnt < 100)
+            {
+                net_amnt = 100;
+            }
+            Console.WriteLine("Net amount paid by the customer:{0:N2}", net_amnt);
+
+
+
+        }
+    }
+}

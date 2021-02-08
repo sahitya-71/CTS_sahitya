@@ -1,0 +1,189 @@
+2.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace project1
+{
+    class assignment2
+    {
+        static void Main()
+        {
+            int a, b, c;
+           
+            Console.WriteLine("Enter three numbers");
+            a = Convert.ToInt16(Console.ReadLine());
+            b = Convert.ToInt16(Console.ReadLine());
+            c = Convert.ToInt16(Console.ReadLine());
+            Console.WriteLine("Sum of {0} and {1} and {2} is {3}", a, b,c ,(a+b+c));
+
+        }
+       
+
+
+    }
+}
+3.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace project1
+{
+    class first20nat
+    {
+        static void Main()
+        {
+            float sum = 0;
+         
+            for (int i = 1; i <= 20; i++)
+            {
+                sum = sum + i;
+            }
+           float  average = sum / 20;
+            Console.WriteLine("Sum is {0}", sum);
+            Console.WriteLine("Average is {0}", average);
+
+        }
+    }
+}
+4.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace project1
+{
+    class first50
+    {
+        static void Main()
+        {
+
+            for (int n = 2; n <= 100; n += 2)
+            {
+                Console.WriteLine(n);
+
+            }
+        }
+
+
+    }
+}
+5.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace project1
+{
+    class prime
+    {
+        static void Main()
+        {
+            int n, flag = 0, i = 2;
+            Console.WriteLine("Enter Num ");
+            n = Convert.ToByte(Console.ReadLine());
+            for (i = 2; i <= n / 2; ++i)
+            {
+                if (n % i == 0)
+                {
+                    flag = 1;
+                    break;
+                }
+
+            }
+            if (n == 1)
+            {
+                Console.WriteLine(" 1 is not prime number");
+            }
+            else
+            {
+                if (flag == 0)
+                    Console.WriteLine(" it is a prime number");
+                else
+                {
+                    Console.WriteLine(" it is not a prime number");
+                }
+
+            }
+        }
+    }
+}
+6.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace project1
+{
+    class table
+    {
+        static void Main()
+        {
+            int n, p;
+            Console.WriteLine("Enter Num ");
+            n = Convert.ToByte(Console.ReadLine());
+            for (int i= 1;i<= 10;i++)
+            {
+                p = n * i;
+                Console.WriteLine( "{0}*{1}={2}",n,i,p);
+
+            }  
+        }
+    }
+}
+
+7.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace project1
+{
+    class convert
+    {
+        static void Main()
+        {
+            int a, b,d;
+            long c;
+            Console.WriteLine("Enter Number a");
+            a = Convert.ToInt16(Console.ReadLine());
+            Console.WriteLine("Entered number is " + a);
+            Console.WriteLine("Enter Number b");
+            b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Entered number is " + b);
+            Console.WriteLine("Enter Number c");
+            c = Convert.ToInt64(Console.ReadLine());
+            Console.WriteLine("Entered number is " + c);
+            Console.WriteLine("Enter Number d");
+            d = Convert.ToByte(Console.ReadLine());
+            Console.WriteLine("Entered number is " + d);
+
+
+
+
+        }
+    }
+}
+8.
+using system-->we can use classes from system namespace.
+console-->is a class of syatem.
+write-->prints on same line.
+writeline-->prints on next line.
+readline-->to read statement given by user.
+9.
+Yes
+10.
+Static means that you can call the function without having an instance of a class

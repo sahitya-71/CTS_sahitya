@@ -1,0 +1,12 @@
+C:\Users\sahit\source\repos\movieCruiser1\movieCruiser1\bin\Debug\movieCruiser1.exe.config
+C:\Users\sahit\source\repos\movieCruiser1\movieCruiser1\bin\Debug\movieCruiser1.exe
+C:\Users\sahit\source\repos\movieCruiser1\movieCruiser1\bin\Debug\movieCruiser1.pdb
+C:\Users\sahit\source\repos\movieCruiser1\movieCruiser1\bin\Debug\Com.Cognizant.MovieCruiser.Dao.dll
+C:\Users\sahit\source\repos\movieCruiser1\movieCruiser1\bin\Debug\Com.Cognizant.MovieCruiser.Model.dll
+C:\Users\sahit\source\repos\movieCruiser1\movieCruiser1\bin\Debug\Com.Cognizant.MovieCruiser.Dao.pdb
+C:\Users\sahit\source\repos\movieCruiser1\movieCruiser1\bin\Debug\Com.Cognizant.MovieCruiser.Model.pdb
+C:\Users\sahit\source\repos\movieCruiser1\movieCruiser1\obj\Debug\movieCruiser1.csprojAssemblyReference.cache
+C:\Users\sahit\source\repos\movieCruiser1\movieCruiser1\obj\Debug\movieCruiser1.csproj.CoreCompileInputs.cache
+C:\Users\sahit\source\repos\movieCruiser1\movieCruiser1\obj\Debug\movieCruiser1.csproj.CopyComplete
+C:\Users\sahit\source\repos\movieCruiser1\movieCruiser1\obj\Debug\movieCruiser1.exe
+C:\Users\sahit\source\repos\movieCruiser1\movieCruiser1\obj\Debug\movieCruiser1.pdb

@@ -1,0 +1,118 @@
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace project1
+{
+    class program2
+    {
+        static void Main()
+        {
+            // Collection Initializer
+            List<Product> productlist = new List<Product>()
+            {
+
+                new Product(101, "Mouse", 90, 900),
+                new Product(102, "Plotter", 10, 1900),
+                new Product(103, "Printer", 10, 1900),
+                new Product(104, "Scanner", 10, 1900),
+                new Product(105, "Motherboard", 10, 1900)
+              };
+
+            Console.WriteLine("List of Items");
+            foreach(Product temp in productlist)
+            {
+                Console.WriteLine(temp.product_name + "\t" + temp.qty_in_stock); ;
+            }
+
+             
+                int qty;
+                string pname;
+                Console.WriteLine("Enter product name");
+                pname = Console.ReadLine();
+                Console.WriteLine("Enter quantity");
+                qty = Convert.ToByte(Console.ReadLine());
+
+            SearchProduct(pname, qty);
+
+            
+        }
+
+        static Product SearchProduct(string pname, int qty)
+        {
+
+            foreach (Product temp in productlist)
+            {
+                if (temp.product_name == pname)
+                {
+                    if (qty <= temp.qty_in_stock)
+                    {
+                        Console.WriteLine(temp.product_name + "\t" + temp.qty_in_stock); ;
+                    }
+                }
+            }
+
+                
+
+        }
+
+    }
+}
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace project1
+{
+    class Product
+    {
+        public int pcode;
+        public int qty_in_stock;
+        public readonly double discount_allowed;
+        public static String brand;
+        public String product_name;
+        double price;
+        public Product() { }
+        public Product(int pcode, String product_name,int qty_in_stock,
+         double discount_allowed)
+        {
+            this.pcode = pcode;
+            
+            this.qty_in_stock = qty_in_stock;
+            this.discount_allowed = discount_allowed;
+            this.product_name = product_name;
+
+        }
+        //public void ItemToPurchase()
+        //{
+        //    int qty;
+        //    string pname;
+        //    Console.WriteLine("Enter product name");
+        //    pname = Console.ReadLine();
+        //    Console.WriteLine("Enter quantity");
+        //    qty = Convert.ToByte(Console.ReadLine());
+        //}
+
+       
+        public void Calculatetotalamount(string pname, int qty)
+        {
+
+            int total_amount;
+            total_amount = (price * qty) - discount_allowed;
+        }
+        public void Printbill()
+        {
+            Console.WriteLine("product Name  " + product_name);
+            Console.WriteLine("Qty "  + qty_in_stock);
+        }
+    }
+
+}
+
+

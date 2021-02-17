@@ -1,0 +1,523 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ClassLibrary1
+{
+   public class Numericfunctions
+    {
+        //1.Add n no. of arguments
+        public int add(params int[] num)
+        {
+            int sum = 0;
+            foreach (int x in num)
+            {
+                sum += x;
+            }
+            return sum;
+        }
+        //2.Subtract 
+        public int subtract(int num1, int num2)
+        {
+            return num1 - num2;
+        }
+        //3.Multiply
+        public int multiply(int num1, int num2)
+        {
+            return num1 * num2;
+        }
+        //4.divide
+        public float Divide(int num1, int num2)
+        {
+            return (float)num1 / (float)num2;
+        }
+        //5.Find Max
+        public int FindMax(params int[] num)
+        {
+            int max = 0;
+            for (int i = 0; i <num.Length; i++)
+            {
+                if (num[i] > max)
+                    max = num[i];
+            }
+            return max;
+        }
+        //6.Find Min
+        public int FindMin(params int[] num)
+        {
+            int min = num[0];
+            for (int i = 0; i <num.Length; i++)
+            {
+                if (num[i] < min)
+                    min = num[i];
+            }
+            return min;
+        }
+        //7.Check a no. for even
+        public Boolean CheckEven(int num)
+        {
+            if (num % 2 == 0)
+                return true;
+            else
+                return false;
+        }
+        //8.Check a no. for odd
+        public Boolean Checkodd(int num)
+        {
+            if (num % 2 != 0)
+                return true;
+            else
+                return false;
+        }
+        //9.Check a no. for prime
+        public Boolean Checkprime(int num)
+        {
+            int flag = 0;
+            for (int i = 2; i < num; i++)
+            {
+                if (num % i == 0)
+                {
+                    flag = 0;
+                    break;
+                }
+                else
+                    flag = 1;
+            }
+            if (flag == 1)
+                return true;
+            else
+                return false;
+
+
+        }
+        //10.Display all even no.s with in a given range
+        public List<int> Displayeven(int start, int end)
+        {
+            List<int> EvenNumbers = new List<int>();
+            for (int i = start; i <= end; i++)
+            {
+                if (CheckEven(i))
+                    EvenNumbers.Add(i);
+            }
+            return EvenNumbers;
+        }
+        //11.Display all odd no.s with in a given range
+        public List<int> Displayodd(int start, int end)
+        {
+            List<int> oddNumbers = new List<int>();
+            for (int i = start; i <= end; i++)
+            {
+                if (Checkodd(i))
+                    oddNumbers.Add(i);
+            }
+            return oddNumbers;
+        }
+        //12.Display all prime no.s with in a given range
+        public List<int> Displayprime(int start, int end)
+        {
+            List<int> primeNumbers = new List<int>();
+            for (int i = start; i <= end; i++)
+            {
+                if (Checkprime(i))
+                    primeNumbers.Add(i);
+            }
+            return primeNumbers;
+        }
+        //13.Diplay table of an entered no
+        public void Table(int num)
+        {
+            int product;
+            for (int i = 1; i <= 10; i++)
+            {
+                product = num * i;
+                Console.WriteLine("{0}*{1}={2}", num, i, product);
+            }
+        }
+        //14.Display tables from 1 to 10 of all no.s with in a given range
+        public void  Displaytable(int start,int end)
+        {
+            for (int i = start; i <= end; i++)
+                Table(i);
+        }
+        //15.Display tables from a given range of all no.s with in a given range
+        public void Displaytablerange(int start,int end,int starttable,int endtable)
+        {
+            int product; 
+            for (int i = start; i <= end; i++)
+            {
+                for (int j=starttable; j <= endtable; j++)
+                {
+                     product = i * j;
+                    Console.WriteLine("{0}*{1}={2}", i, j, product);
+                }
+               
+            }
+        }
+
+        //16.Reverse a no.
+        public int Reversenum(int num)
+        {
+            int rev = 0, rem;
+            while(num!=0)
+            {
+                rem = num % 10;
+                rev = rev * 10 + rem;
+                num = num / 10;
+            }
+            return rev;
+        }
+
+    }
+}
+//Main Function
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using ClassLibrary1;
+
+namespace project1
+{
+    class numeric
+    {
+     static void Main()
+        {
+            Numericfunctions numericfunctions = new Numericfunctions();
+            //1.Add n no. of arguments
+            Console.WriteLine("Enter the size of array");
+            int size = Convert.ToInt32(Console.ReadLine());
+            int[] num = new int[size];
+            Console.WriteLine("Enter the numbers you want to add");
+            for(int i = 0; i < size; i++)
+            {
+                num[i] = Convert.ToInt16(Console.ReadLine());
+            }
+            Console.WriteLine("sum of the numbers is" + numericfunctions.add(num));
+            //2.Subtract 
+            Console.WriteLine("The difference of two numbers is" + numericfunctions.subtract(7, 4));
+            //3.multiply
+            Console.WriteLine("The product of two numbers is" + numericfunctions.multiply(7, 4));
+            //4.divide
+            Console.WriteLine("The division of two numbers is" + numericfunctions.Divide(7, 4));
+            //5.Find Max
+            Console.WriteLine("Enter the size of array");
+            int size1 = Convert.ToInt32(Console.ReadLine());
+            int[] num1 = new int[size1];
+            Console.WriteLine("Enter the numbers you want to add");
+            for (int i = 0; i < size1; i++)
+            {
+                num1[i] = Convert.ToInt16(Console.ReadLine());
+            }
+            Console.WriteLine("max element is" + numericfunctions.FindMax(num1));
+            //6.Find Min
+            Console.WriteLine("Enter the size of array");
+            int size2 = Convert.ToInt32(Console.ReadLine());
+            int[] num2 = new int[size2];
+            Console.WriteLine("Enter the numbers you want to add");
+            for (int i = 0; i < size2; i++)
+            {
+                num2[i] = Convert.ToInt16(Console.ReadLine());
+            }
+            Console.WriteLine("min element is" + numericfunctions.FindMin(num2));
+            //7.check for even
+            int number;
+            Console.WriteLine("Enter a number");
+            number = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(numericfunctions.CheckEven(number));
+            //8.check for odd 
+            int number2;
+            Console.WriteLine("Enter a number");
+            number2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(numericfunctions.Checkodd(number2));
+            //9.check for prime number
+            int number3;
+            Console.WriteLine("Enter a number");
+            number3 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(numericfunctions.Checkprime(number3));
+            //10.Display all even no.s with in a given range
+            List<int> number5 = new List<int>();
+            int startrange, stoprange;
+            Console.WriteLine("Enter start range of number");
+            startrange = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter end range of a number");
+            stoprange = Convert.ToInt32(Console.ReadLine());
+            number5 = numericfunctions.Displayeven(startrange,stoprange);
+            Console.WriteLine("Even numbers in list are");
+            foreach (int i in number5)
+                Console.WriteLine(i);
+            //11.Display all odd no.s with in a given range
+            List<int> number7 = new List<int>();
+            int startrange1, stoprange1;
+            Console.WriteLine("Enter start range of number");
+            startrange1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter end range of a number");
+            stoprange1 = Convert.ToInt32(Console.ReadLine());
+            number7 = numericfunctions.Displayodd(startrange1,stoprange1);
+            Console.WriteLine("Odd numbers in range are");
+            foreach (int i in number7)
+                Console.WriteLine(i);
+            //12.Display all prime numbers with in a given range
+            List<int> number8 = new List<int>();
+            int startrange2, stoprange2;
+            Console.WriteLine("Enter start range of number");
+            startrange2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter end range of a number");
+            stoprange2 = Convert.ToInt32(Console.ReadLine());
+            number8 = numericfunctions.Displayprime(startrange2,stoprange2);
+            Console.WriteLine("prime numbers in list are");
+            foreach (int i in number8)
+                Console.WriteLine(i);
+            //13.enter table og given number
+            int number6;
+            Console.WriteLine("Enter a number");
+            number6 = Convert.ToInt32(Console.ReadLine());
+            numericfunctions.Table(number6);
+            //14.Display tables from 1 to 10 of all no.s with in a given range
+            int start, end;
+            Console.WriteLine("Enter start range");
+            start = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter end range");
+            end= Convert.ToInt32(Console.ReadLine());
+            numericfunctions.Displaytable(start, end);
+            //15.Display tables from a given range of all no.s with in a given range
+            int start1, start2, end1, end2;
+            Console.WriteLine("Enter start range of number");
+            start1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter end range of a number");
+            end1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter start range of a table number");
+            start2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter end range of a table number");
+            end2= Convert.ToInt32(Console.ReadLine());
+            numericfunctions.Displaytablerange(start1, end1, start2, end2);
+            //16.Reverse a no.
+            int number9;
+            Console.WriteLine("Enter a number");
+            number9 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(numericfunctions.Reversenum(number9));
+        }
+    }
+}
+//string Functions
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ClassLibrary1
+{
+    public class StringFunctions
+    {
+        // 1.Find no. of characters in a sentence
+        public int Noofcharacters(string string1)
+        {
+            int count = 0;
+            foreach (char c in string1)
+            {
+                if(!char.IsWhiteSpace(c))
+                {
+                    count++;
+                }
+            }
+            return count;
+        }
+        //2.Check for Palindrome
+        public Boolean Palindromecheck(string string1)
+        {
+            String reverse ="";
+            for(int i= string1.Length - 1;i>= 0;i--)
+            {
+                reverse += string1[i].ToString();
+            }
+            if (reverse == string1)
+                return true;
+            else
+                return false;   
+        }
+       //3.Reverse a sentencene
+        public String ReverseString(string string1, String reverse = "")
+        {
+            //String reverse = "\0";
+            for (int i = string1.Length - 1; i >= 0; i--)
+            {
+                reverse += string1[i].ToString();
+            }
+            return "the reverse string is"+reverse;
+        }
+        //4.Find no. of vowels, consonants, integers and sp characters in a sentence
+        public String Countcharacters(string string1)
+        {
+            int vowel = 0;
+            int consonant = 0;
+            int Integers = 0;
+            int specialcharacters=0;
+            foreach(char c in string1)
+            {
+                if(!char.IsWhiteSpace(c))
+                {
+                        if (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U')
+                            vowel++;
+                        else if((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+                            consonant++;
+                    else if(c>='0' && c<='9')
+                            Integers++;
+                    else
+                        specialcharacters++;
+                }
+            }
+            return "No.of vowels,consonents,Integers and Specialcharacters " + vowel + "," + consonant + "," + Integers + "and" + specialcharacters;
+        }
+        //5.Change case to upper case
+        public string Uppercase(string string1)
+        {
+            return string1.ToUpper();
+                        }
+        //6.Change sentence to proper case
+        public string Propercase(string string1)
+        {
+            string str = "";
+            str += (char.ToUpper(string1[0]));
+            for(int i=1;i<string1.Length;i++)
+            {
+                if (char.IsWhiteSpace(string1[i - 1]))
+                {
+                    str += char.ToUpper(string1[i]);
+                }
+                else
+                    str += string1[i];
+            }
+            return str;
+        }
+        //7.Combine two sentences
+        public string CombineSentences(string string1, string string2)
+        {
+            return string1 + " " + string2;
+        }
+        //8.Remove extra spaces in a sentence
+        //public string Removeextraspace(string string1)
+        //{
+        //    return string1.Replace("  ", " ");
+        //}
+        public string RemoveExtraWhitespace(string str)
+        {
+            var sb = new StringBuilder();
+            var prevIsWhitespace = false;
+            foreach (var ch in str)
+            {
+                var isWhitespace = char.IsWhiteSpace(ch);
+                if (prevIsWhitespace && isWhitespace)
+                {
+                    continue;
+                }
+                sb.Append(ch);
+                prevIsWhitespace = isWhitespace;
+            }
+            return sb.ToString();
+        }
+        //9.Count no. of words in a sentence
+        public int Numberofwords(string string1)
+        {
+            int count = 1;
+                foreach (char c in string1)
+            {
+                if (char.IsWhiteSpace(c) || c == '\n' || c == '\t')
+                    count++;
+            }
+            return count;
+        }
+        //10.Search a substring in a sentence
+        public Boolean Substring(string string1,string substring)
+        {
+            if (string1.Contains(substring) == true)
+                return true;
+            else
+                return false;
+        }
+        //11.Find the no. of occurences of a substring in a sentence
+        public int Numberofoccurances(string string1,string substring)
+        {
+            int count = 0,a=0;
+            while((a=string1.IndexOf(substring,a))!=-1)
+            {
+                a += substring.Length;
+                count++;
+            }
+            return count;
+           
+        }
+    }
+}
+//main function
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using ClassLibrary1;
+
+namespace project1
+{
+    class stringclass
+    {
+        static void Main()
+        {
+            StringFunctions stringFunctions = new StringFunctions();
+            //1.no of characters
+            Console.WriteLine("Enter the string");
+            string string1 = Console.ReadLine();
+            Console.WriteLine("The no of characters in a string " + stringFunctions.Noofcharacters(string1));
+            //2.Palindromecheck
+            Console.WriteLine("Enter the string");
+            string string2 = Console.ReadLine();
+            Console.WriteLine(stringFunctions.Palindromecheck(string2));
+            //3.ReverseString
+            Console.WriteLine("Enter the string");
+            string string3 = Console.ReadLine();
+            Console.WriteLine(stringFunctions.ReverseString(string3));
+            //4.Countcharacters
+            Console.WriteLine("Enter the string");
+            string string4 = Console.ReadLine();
+            Console.WriteLine(stringFunctions.Countcharacters(string4));
+            //5.upper case
+            Console.WriteLine("Enter the string");
+            string string5 = Console.ReadLine();
+            Console.WriteLine(stringFunctions.Uppercase(string5));
+            //6.proper case
+            Console.WriteLine("Enter the string");
+            string str = Console.ReadLine();
+            Console.WriteLine(stringFunctions.Propercase(str));
+            //7.combine sentences
+            Console.WriteLine("Enter the string");
+            string string6 = Console.ReadLine();
+            Console.WriteLine("Enter the string");
+            string string7 = Console.ReadLine();
+            Console.WriteLine(stringFunctions.CombineSentences(string6, string7));
+            //8.remove extra spaces
+            Console.WriteLine("Enter the string");
+            string string13 = Console.ReadLine();
+            Console.WriteLine( stringFunctions.RemoveExtraWhitespace(string13));
+            //9.no of words
+            Console.WriteLine("Enter the string");
+            string string8 = Console.ReadLine();
+            Console.WriteLine("The no of words in a string " + stringFunctions.Numberofwords(string8));
+            //10.search substring
+            Console.WriteLine("Enter the string");
+            string string9 = Console.ReadLine();
+            Console.WriteLine("Enter the string");
+            string string10 = Console.ReadLine();
+            Console.WriteLine(stringFunctions.Substring(string9,string10));
+            //11.Find the no. of occurences of a substring in a sentence
+            Console.WriteLine("Enter the string");
+            string string11 = Console.ReadLine();
+            Console.WriteLine("Enter the string");
+            string string12 = Console.ReadLine();
+            int countoccurances = stringFunctions.Numberofoccurances(string11,string12);
+            Console.WriteLine("The no of characters in a string " + countoccurances);
+        }
+    }
+}

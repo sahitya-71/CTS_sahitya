@@ -58,7 +58,7 @@ namespace Com.Cognizant.MovieCruiser.Dao
 
             foreach (Movie temp in movielist)
             {
-                Console.WriteLine("{0,3}   {1,-18} {2,-6}    {3,-14} {4}    {5,-15}     {6}", i, temp.title, temp.boxoffice, temp.active, temp.dateOfLaunch, temp.genre, temp.hasTeaser);
+                Console.WriteLine("{0,3}   {1,-18} {2,-6}    {3,-14} {4}    {5,-15}     {6}", i, temp.Title, temp.Boxoffice, temp.Active, temp.DateOfLaunch, temp.Genre, temp.hasTeaser);
                 i++;
             }
            
@@ -68,18 +68,18 @@ namespace Com.Cognizant.MovieCruiser.Dao
             movielist = GetMovieList();
             foreach (Movie temp in movielist)
             {
-                if (temp.title == tiTle)
+                if (temp.Title == tiTle)
                 {
                     Console.WriteLine("Enter title");
-                    temp.title = Console.ReadLine();
+                    temp.Title = Console.ReadLine();
                     //Console.WriteLine("Enter Boxoffice");
                     //temp.boxoffice = Console.ReadLine();
                     Console.WriteLine("Enter Active");
-                    temp.active = Console.ReadLine();
+                    temp.Active = Console.ReadLine();
                     Console.WriteLine("Enter Dateoflaunch");
-                    temp.dateOfLaunch = Console.ReadLine();
+                    temp.DateOfLaunch = Console.ReadLine();
                     Console.WriteLine("Enter genre");
-                    temp.genre = Console.ReadLine();
+                    temp.Genre = Console.ReadLine();
                     Console.WriteLine("Enter Hasteaser");
                     temp.hasTeaser = Console.ReadLine();
                     Console.WriteLine("Selected Record Updated Succesfully");
@@ -89,28 +89,28 @@ namespace Com.Cognizant.MovieCruiser.Dao
     }
     public class Customer:User
     {
-        int CustomerId;
-        public int customerId
+        int customerId;
+        public int CustomerId
         {
             get
             {
-                return CustomerId;
+                return customerId;
             }
             set
             {
-                CustomerId = value;
+                customerId = value;
             }
         }
-        string CustomerName;
-        public string customerName
+        string customerName;
+        public string CustomerName
         {
             get
             {
-                return CustomerName;
+                return customerName;
             }
             set
             {
-                CustomerName = value;
+                customerName = value;
             }
         }
         public Customer() { }
@@ -131,7 +131,7 @@ namespace Com.Cognizant.MovieCruiser.Dao
             Console.WriteLine(" Id     Title             BoxOffice            Genre           HasTeaser");
             for (int a = 0; a < movielist.Count - (2); a++)
             {
-                Console.WriteLine("{0,3}   {1,-18} {2,-6}    {3,-16}     {4,-2}", i, movielist[a].title, movielist[a].boxoffice, movielist[a].genre, movielist[a].hasTeaser);
+                Console.WriteLine("{0,3}   {1,-18} {2,-6}    {3,-16}     {4,-2}", i, movielist[a].Title, movielist[a].Boxoffice, movielist[a].Genre, movielist[a].hasTeaser);
                 i++;
             }
         }
@@ -151,23 +151,23 @@ namespace Com.Cognizant.MovieCruiser.Dao
             foreach (Movie temp in movielist)
             {
                 count++;
-                if (temp.id == id)
+                if (temp.Id == id)
                 {
                     foreach (Movie emp in favorites)
                     {
-                        if (temp.id == emp.id)
+                        if (temp.Id == emp.Id)
                         {
                             s = 1;
                         }
                     }
                     if (s == 0)
                     {
-                        favId = temp.id;
-                        FavTitle = temp.title;
-                        FavBoxOffice = temp.boxoffice;
-                        FavActive = temp.active;
-                        FavDateOfLaunch = temp.dateOfLaunch;
-                        FavGenre = temp.genre;
+                        favId = temp.Id;
+                        FavTitle = temp.Title;
+                        FavBoxOffice = temp.Boxoffice;
+                        FavActive = temp.Active;
+                        FavDateOfLaunch = temp.DateOfLaunch;
+                        FavGenre = temp.Genre;
                         FavHasteaser = temp.hasTeaser;
                         favorites.Add(new Movie(favId, FavTitle, FavBoxOffice, FavActive, FavDateOfLaunch, FavGenre, FavHasteaser));
                         Console.WriteLine("Movie Added to Favorites Succesfully");
@@ -191,7 +191,7 @@ namespace Com.Cognizant.MovieCruiser.Dao
             Console.WriteLine(" Id     Title             BoxOffice            Genre");
             foreach (Movie temp in favorites)
             {
-                Console.WriteLine("{0,3}   {1,-18} {2,-6}    {3,-16}", i, temp.title, temp.boxoffice, temp.genre);
+                Console.WriteLine("{0,3}   {1,-18} {2,-6}    {3,-16}", i, temp.Title, temp.Boxoffice, temp.Genre);
                 i++;
             }
         }

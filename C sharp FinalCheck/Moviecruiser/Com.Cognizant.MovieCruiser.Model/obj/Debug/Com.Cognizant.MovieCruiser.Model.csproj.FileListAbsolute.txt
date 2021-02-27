@@ -4,3 +4,9 @@ C:\Users\sahit\source\repos\Moviecruiser\Com.Cognizant.MovieCruiser.Model\obj\De
 C:\Users\sahit\source\repos\Moviecruiser\Com.Cognizant.MovieCruiser.Model\obj\Debug\Com.Cognizant.MovieCruiser.Model.csproj.CoreCompileInputs.cache
 C:\Users\sahit\source\repos\Moviecruiser\Com.Cognizant.MovieCruiser.Model\obj\Debug\Com.Cognizant.MovieCruiser.Model.dll
 C:\Users\sahit\source\repos\Moviecruiser\Com.Cognizant.MovieCruiser.Model\obj\Debug\Com.Cognizant.MovieCruiser.Model.pdb
+D:\Training\C sharp FinalCheck\Moviecruiser\Com.Cognizant.MovieCruiser.Model\bin\Debug\Com.Cognizant.MovieCruiser.Model.dll
+D:\Training\C sharp FinalCheck\Moviecruiser\Com.Cognizant.MovieCruiser.Model\bin\Debug\Com.Cognizant.MovieCruiser.Model.pdb
+D:\Training\C sharp FinalCheck\Moviecruiser\Com.Cognizant.MovieCruiser.Model\obj\Debug\Com.Cognizant.MovieCruiser.Model.csprojAssemblyReference.cache
+D:\Training\C sharp FinalCheck\Moviecruiser\Com.Cognizant.MovieCruiser.Model\obj\Debug\Com.Cognizant.MovieCruiser.Model.csproj.CoreCompileInputs.cache
+D:\Training\C sharp FinalCheck\Moviecruiser\Com.Cognizant.MovieCruiser.Model\obj\Debug\Com.Cognizant.MovieCruiser.Model.dll
+D:\Training\C sharp FinalCheck\Moviecruiser\Com.Cognizant.MovieCruiser.Model\obj\Debug\Com.Cognizant.MovieCruiser.Model.pdb

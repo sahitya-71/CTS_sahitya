@@ -8,81 +8,81 @@ namespace Com.Cognizant.MovieCruiser.Model
 {
     public class Movie
     {
-        int Id;
-        public int id
+        int id;
+        public int Id
         {
             get
             {
-                return Id;
+                return id;
             }
             set
             {
-                Id = value;
+                id = value;
             }
         }
 
-        string Title;
-        public string title
+        string title;
+        public string Title
         {
             get
             {
-                return Title;
+                return title;
             }
             set
             {
-                Title = value;
+                title = value;
             }
         }
 
-        string BoxOffice;
-        public string boxoffice
+        string boxOffice;
+        public string Boxoffice
         {
             get
             {
-                return BoxOffice;
+                return boxOffice;
             }
             set
             {
-                boxoffice = value;
+                boxOffice = value;
             }
         }
 
-        string Active;
-        public string active
+        string active;
+        public string Active
         {
             get
             {
-                return Active;
+                return active;
             }
             set
             {
-                Active = value;
+                active = value;
             }
         }
 
-        string DateOfLaunch;
-        public string dateOfLaunch
+        string dateOfLaunch;
+        public string DateOfLaunch
         {
             get
             {
-                return DateOfLaunch;
+                return dateOfLaunch;
             }
             set
             {
-                DateOfLaunch = value;
+                dateOfLaunch = value;
             }
         }
 
-        string Genre;
-        public string genre
+        string genre;
+        public string Genre
         {
             get
             {
-                return Genre;
+                return genre;
             }
             set
             {
-                Genre = value;
+                genre = value;
             }
         }
 
@@ -106,7 +106,7 @@ namespace Com.Cognizant.MovieCruiser.Model
         {
             this.Id = Id;
             this.Title = Title;
-            this.BoxOffice = BoxOffice;
+            this.Boxoffice = Boxoffice;
             this.Active = Active;
             this.DateOfLaunch = DateOfLaunch;
             this.Genre = Genre;
